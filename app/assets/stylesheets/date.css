@@ -1,0 +1,21 @@
+body {
+	background-color:#faf0f0;
+}
+.last7 {
+	color: lightgreen;
+}
+.last14 {
+	color: pink;
+}
+.last28 {
+	color: skyblue;
+}
+.today {
+	font-size: 11px;
+	color: red;
+}
+
+table {
+  border-spacing: 0;
+  font-size: 12px;
+}
