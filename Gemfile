@@ -7,7 +7,7 @@ ruby '2.4.0'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
-gem 'mysql2'
+gem 'mysql2', group: :development
 # 本番ではpostgressを使用する
 gem 'pg', group: :production
 # Use Puma as the app server
