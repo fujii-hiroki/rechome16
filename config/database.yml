@@ -23,18 +23,18 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: Rails_test
   pool: 5
-  username: railsuser
-  password: mypassword
-  socket: /var/run/mysqld/mysqld.sock
+  username: rechome
+  password: rechome
+  database: rechome
+  socket: /tmp/mysql.sock
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: Rails_production
   pool: 5
-  username: railsuser
-  password: mypassword
-  socket: /var/run/mysqld/mysqld.sock
+  username: rechome
+  password: rechome
+  database: rechome
+  socket: /tmp/mysql.sock
 
