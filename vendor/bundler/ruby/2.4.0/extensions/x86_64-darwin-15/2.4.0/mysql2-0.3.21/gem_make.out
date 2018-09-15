@@ -1,0 +1,74 @@
+current directory: /Users/fujiihiroki/Documents/gitws/rechome16/vendor/bundler/ruby/2.4.0/gems/mysql2-0.3.21/ext/mysql2
+/usr/local/opt/ruby/bin/ruby -r ./siteconf20180915-72766-hgz2ck.rb extconf.rb
+checking for ruby/thread.h... yes
+checking for rb_thread_call_without_gvl() in ruby/thread.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for mysql_query() in -lmysqlclient... no
+-----
+libmysqlclient is missing. Trying again with extra runtime libraries...
+-----
+checking for -lm... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for -lz... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for -lsocket... no
+checking for -lnsl... no
+checking for -lmygcc... no
+-----
+libmysqlclient is missing. You may need to 'brew install mysql' or 'port install mysql', and try again.
+-----
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/usr/local/Cellar/ruby/2.4.0/bin/$(RUBY_BASE_NAME)
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysql-config
+	--without-mysql-config
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mlib
+	--without-mlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-zlib
+	--without-zlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-socketlib
+	--without-socketlib
+	--with-nsllib
+	--without-nsllib
+	--with-mygcclib
+	--without-mygcclib
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/fujiihiroki/Documents/gitws/rechome16/vendor/bundler/ruby/2.4.0/extensions/x86_64-darwin-15/2.4.0/mysql2-0.3.21/mkmf.log
+
+extconf failed, exit code 1
