@@ -6,6 +6,7 @@ function initializePage()
 {
   /* いついつから○○日経過（年月日,内容） */
   var FROM_DATE_ARRAY = [
+    {date: "2012/11/26", note: "こよ誕生"},
     {date: "2018/5/3",   note: "みひろ誕生"},
     {date: "2011/4/29",  note: "パパ・ママ結婚"},
     {date: "2010/10/16", note: "付き合って"},
