@@ -1,7 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+seeds = YAML.load_file("db/seeds/seed.yml")
+
+User.delete_all
+seeds[:users].each do |s|
+  u = User.new
+  u.id = s[:id]
+  u.name = s[:name]
+  u.password = s[:password]
+  u.reset_password = s[:reset_password]
+  u.save!
+end
+
+Lasttime.delete_all
+seeds[:lasttimes].each do |s|
+  lt = Lasttime.new
+  lt.id = s[:id]
+  lt.action_name = s[:action_name]
+  lt.lastdone_date = s[:lastdone_date]
+  lt.interval = s[:interval]
+  lt.save!
+end
+

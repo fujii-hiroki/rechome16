@@ -1,0 +1,37 @@
+<%
+class_top = ""
+class_lasttime = ""
+class_date = ""
+#href_top = "../top"
+href_top = "#"
+href_lasttime = "../lasttime"
+href_date = "../date"
+
+case page
+when :top
+  class_top = "active"
+  href_top = "#"
+when :lasttime
+  class_lasttime = "active"
+  href_lasttime = "#"
+when :date
+  class_date = "active"
+  href_date = "#"
+end
+%>
+<ul class="nav nav-tabs" style="margin-bottom:6px;">
+  <li role="presentation" class=<%=class_top%>><a href=<%=href_top%>>トップ</a></li>
+  <li role="presentation" class=<%=class_lasttime%>><a href=<%=href_lasttime%>>さいこれ</a></li>
+  <li role="presentation" class=<%=class_date%>><a href=<%=href_date%>>あとこれ</a></li>
+  <!--
+  <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Dropdown <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li role="presentation"><a href="#">トップ</a></li>
+      <li role="presentation"><a href="#">トップ</a></li>
+    </ul>
+  </li>
+  -->
+</ul>

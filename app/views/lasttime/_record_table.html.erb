@@ -1,0 +1,31 @@
+<table id="recordTable" cellspacing="0" style="font-size:12px;">
+
+  <% today = Date.today.strftime("%Y/%m/%d") %>
+
+  <% @list.each do |l| %>
+    <%
+    # スタイルを決定する
+    style = ''
+    style = 'style=color:red;' if l[:is_over]
+    style = 'style=color:#ff9900;' if l[:is_today]
+    %>
+    <tr <%=style%>>
+      <td>
+        <a href="#" onclick="doneAction(<%=l[:id]%>, '<%=l[:action_name]%>', '<%=today%>');return false;">
+          <img src="/img/check.png" heigh="20" width="20">
+        </a>
+      </td>
+      <td><%=l[:action_name]%></td>
+      <td align="right"><%=l[:goal_date].strftime("%Y/%m/%d")%></td>
+      <td><%=l[:is_over] ? "から" : (l[:is_today] ? "は" : "まで後")%></td>
+      <td align="right"><%=l[:is_today] ? "今" : l[:diff].abs%></td>
+      <td><%=l[:is_over] ? "日経過！" : "日！"%></td>
+      <td>
+        <a href="#" class="close" style="color:red;" onclick="deleteAction(<%=l[:id]%>, '<%=l[:action_name]%>');return false;">&times;</a>
+      </td>
+    </tr>
+
+  <% end %>
+
+</table>
+

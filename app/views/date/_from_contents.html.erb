@@ -1,0 +1,17 @@
+<table>
+  <% contents.each do |c| %>
+  <tr>
+    <td><%=c[:from_date]%> の <%=c[:note]%></td>
+    <td style="width:8px"><br></td>
+    <td>から</td>
+    <td style="width:8px"><br></td>
+    <td align="right">
+      <%=c[:diff_year_month]%>
+      <% if c[:show_diff_date] %>
+        <br>
+        <%=c[:diff_date]%>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+</table>

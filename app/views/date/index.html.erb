@@ -1,5 +1,3 @@
-<body onload="initializePage();">
-
 <!--
 <ul class="nav nav-tabs" role="tablist" style="background-color:#dfdfdf; margin-left:-2px; margin-right:-4px;">
   <li style="background-color:#f0f8ff;"><a style="font-size:10px" href="https://rechome16.appspot.com/lastdone/top">さいこれ</a></li>
@@ -24,45 +22,50 @@
     </ul>
   </li>
 </ul>
--->
-
 
 <br>
-<table style="width:100%; margin-top:-8px;">
+-->
 
-	<!-- あとこれだけ -->
-	<tbody><tr>
-		<td>
-			<fieldset>
-				<legend>あとこれだけ！</legend>
-			</fieldset>
-		</td>
-	</tr>
+<%= render :partial => "common/nav", :locals => { page: :date } %>
 
-	<tr>
-		<td>
-			<div id="toContents">
-      </div></td>
-	</tr>
+<table style="width:100%;">
 
-	<tr><td><br></td></tr>
+  <!-- あとこれだけ -->
+  <tr>
+    <td>
+      <fieldset>
+        <legend>あとこれだけ！</legend>
+      </fieldset>
+    </td>
+  </tr>
 
-	<!-- これだけ経ちました -->
-	<tr>
-		<td>
-			<fieldset>
-				<legend>これだけ経ちました！</legend>
-			</fieldset>
-		</td>
-	</tr>
+  <tr>
+    <td>
+      <div>
+        <%= render :partial => "to_contents", :locals => { contents: @to_contents } %>
+      </div>
+    </td>
+  </tr>
 
-	<tr>
-		<td>
-			<div id="fromContents">
-      </div></td>
-	</tr>
+  <tr><td><br></td></tr>
 
-</tbody></table>
+  <!-- これだけ経ちました -->
+  <tr>
+    <td>
+      <fieldset>
+        <legend>これだけ経ちました！</legend>
+      </fieldset>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div>
+        <%= render :partial => "from_contents", :locals => { contents: @from_contents } %>
+      </div>
+    </td>
+  </tr>
+
+</table>
 
 
-</body></html>

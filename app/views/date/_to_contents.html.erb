@@ -1,0 +1,13 @@
+<table>
+  <% contents.each do |c| %>
+  <tr>
+    <% next_str = (c[:include_year] ? "" : "次の ") %>
+    <td><%=next_str%><%=c[:note]%></td>
+    <td style="width:8px"><br></td>
+    <td>まで</td>
+    <td style="width:8px"><br></td>
+    <td class="pull-right <%=c[:emphasize]%>"><%=c[:diff]%> 日</td>
+    <td style="width:8px"><br></td>
+  </tr>
+  <% end %>
+</table>

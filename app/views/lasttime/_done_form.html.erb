@@ -1,0 +1,37 @@
+<form id="doneFormData">
+
+  <!-- 日付入力 -->
+  <table>
+  <tr>
+    <td>
+      <ul class="pager">
+        <li><a href="#" onclick="toPrevious();">&lt;&lt;前日に</a></li>
+      </ul>
+    </td>
+    <td><input type="date" id="inputDate" name="inputDate" value="2013-05-19"></td>
+    <td>
+      <ul class="pager">
+        <li><a href="#" onclick="toNext();">翌日に&gt;&gt;</a></li>
+      </ul>
+    </td>
+  </tr>
+  </table>
+
+  <table>
+  <tr>
+    <td id="selectGroup">
+      <select id="action" name="action" style="height:26px;">
+        <% @list.each do |l| %>
+          <option value="<%=l[:id]%>"><%="#{l[:action_name]} (#{l[:interval]}日毎)"%></option>
+        <% end %>
+      </select>
+    </td>
+    <td>
+      <button id="doneButton" type="button" class="btn btn-primary" style="margin-left:8px;" formnovalidate>
+      やったよ！
+      </button>
+    </td>
+  </tr>
+  </table>
+
+</form>

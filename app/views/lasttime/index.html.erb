@@ -1,0 +1,19 @@
+<div id="shadow"></div>
+
+<button id="registedAlert" type="button" class="btn btn-mini btn-info response-button" disabled="false">登録したよ！！</button>
+<button id="doneAlert" type="button" class="btn btn-mini btn-info response-button" disabled="false">よくできました！！</button>
+<button id="deletedAlert" type="button" class="btn btn-mini btn-warning response-button" disabled="false">削除したよ！</button>
+<button id="errorAlert" type="button" class="btn btn-mini btn-danger response-button" disabled="false">エラー発生で入力できず…</button>
+<button id="deleteErrorAlert" type="button" class="btn btn-mini btn-danger response-button" disabled="false">エラー発生で削除できず…</button>
+
+<%= render :partial => "common/nav", :locals => { page: :lasttime } %>
+
+<%= render :partial => "done_form" %>
+
+<hr>
+
+<%= render :partial => "regist_form" %>
+
+<hr>
+
+<%= render :partial => "record_table" %>

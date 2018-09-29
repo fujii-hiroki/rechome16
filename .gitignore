@@ -35,3 +35,5 @@
 
 # Ignore swap file
 *.swp
+
+*~
